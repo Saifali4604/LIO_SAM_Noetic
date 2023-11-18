@@ -6,51 +6,6 @@
     <img src="./config/doc/demo.gif" alt="drawing" width="800"/>
 </p>
 
-<p align='center'>
-    <img src="./config/doc/device-hand-2.png" alt="drawing" width="200"/>
-    <img src="./config/doc/device-hand.png" alt="drawing" width="200"/>
-    <img src="./config/doc/device-jackal.png" alt="drawing" width="200"/>
-    <img src="./config/doc/device-livox-horizon.png" alt="drawing" width="200"/>
-</p>
-
-## Menu
-
-  - [**System architecture**](#system-architecture)
-
-  - [**Package dependency**](#dependency)
-
-  - [**Package install**](#install)
-
-  - [**Prepare lidar data**](#prepare-lidar-data) (must read)
-
-  - [**Prepare IMU data**](#prepare-imu-data) (must read)
-
-  - [**Sample datasets**](#sample-datasets)
-
-  - [**Run the package**](#run-the-package)
-
-  - [**Other notes**](#other-notes)
-
-  - [**Issues**](#issues)
-
-  - [**Paper**](#paper)
-
-  - [**TODO**](#todo)
-
-  - [**Related Package**](#related-package)
-
-  - [**Acknowledgement**](#acknowledgement)
-
-## System architecture
-
-<p align='center'>
-    <img src="./config/doc/system.png" alt="drawing" width="800"/>
-</p>
-
-We design a system that maintains two graphs and runs up to 10x faster than real-time.
-  - The factor graph in "mapOptimization.cpp" optimizes lidar odometry factor and GPS factor. This factor graph is maintained consistently throughout the whole test.
-  - The factor graph in "imuPreintegration.cpp" optimizes IMU and lidar odometry factor and estimates IMU bias. This factor graph is reset periodically and guarantees real-time odometry estimation at IMU frequency.
-
 ## Dependency
 
 This is the original ROS1 implementation of LIO-SAM. For a ROS2 implementation see branch `ros2`.
