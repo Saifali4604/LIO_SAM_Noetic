@@ -56,3 +56,9 @@ rosbag play your-bag.bag -r 3
 
   * KITTI dataset. The extrinsics can be found in the Notes KITTI section below. To generate more bags using other KITTI raw data, you can use the python script provided in "config/doc/kitti2bag".
     - **2011_09_30_drive_0028:** [[Google Drive](https://drive.google.com/drive/folders/1gJHwfdHCRdjP7vuT556pv8atqrCJPbUq?usp=sharing)]
+
+---
+
+## Acknowledgement
+[(https://github.com/TixiaoShan/LIO-SAM)]
+
